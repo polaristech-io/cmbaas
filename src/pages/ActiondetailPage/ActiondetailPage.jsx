@@ -33,13 +33,13 @@ const ActiondetailPage = (props) => {
       <div className="ActiondetailPage">
         <Row>
           <Col xs="12">
-            <PageTitleDivStyled>Actions | Action Detail Page</PageTitleDivStyled>
+            <PageTitleDivStyled>操作 | 操作详情页面</PageTitleDivStyled>
           </Col>
         </Row>       
           { error ?
             <>
               {!isObjectEmpty(error) && <p className="text-danger">{JSON.stringify(error)}</p>}
-              <ErrorButton onClick={props.fetchStart}>Connection error, click to reload</ErrorButton>
+              <ErrorButton onClick={props.fetchStart}>连接错误, 点击重新加载</ErrorButton>
             </>
           : isFetching 
             ? <LoadingSpinner />
@@ -49,7 +49,7 @@ const ActiondetailPage = (props) => {
                       <Col xs="12">
                         <FirstCardStyled>
                           <CardHeaderStyled>
-                            Action Detail
+                            操作明细
                           </CardHeaderStyled>
                           <CardBody>
                             <Actiondetail/> 
@@ -61,7 +61,7 @@ const ActiondetailPage = (props) => {
                       <Col xs="12">
                         <CardStyled>
                           <CardHeaderStyled>
-                            Action Raw JSON
+                            操作原始JSON
                           </CardHeaderStyled>
                           <CardBody>
                             <Actionjson />
@@ -73,7 +73,7 @@ const ActiondetailPage = (props) => {
                 : <CardStyled>
                     <CardHeaderStyled></CardHeaderStyled>
                     <CardBody>
-                      <ErrorDivStyled>No Action found with Transaction ID '{params.id}' and Action ordinal '{params.action_ordinal}'<br/><br/>
+                      <ErrorDivStyled>未找到事务ID为 '{params.id}' 且操作序号为 '{params.action_ordinal}'的操作<br/><br/>
                         <ButtonPrimary
                           onClick={evt=> props.push(`/action-list`)}>Back
                         </ButtonPrimary>           

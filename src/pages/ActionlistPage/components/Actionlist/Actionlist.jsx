@@ -48,10 +48,10 @@ const Actionlist = (props) => {
               <FilterInputStyled
                   disabled={!!smartContractName}
                   name="smartContractNameSearch"
-                  placeholder="Smart Contract Name..."
+                  placeholder="Smart协议名称..."
                   defaultValue={smartContractName}
                   onChange={evt=>{setInputValue(evt.target.value)}}/>
-              <ButtonPrimary color="primary">{smartContractName ? "CLEAR" : "FILTER"}</ButtonPrimary>
+              <ButtonPrimary color="primary">{smartContractName ? "清除" : "过滤"}</ButtonPrimary>
             </FormStyled>
           </CardTitle>
         </Col>
@@ -61,7 +61,7 @@ const Actionlist = (props) => {
         { (error && error.status.name !== "AjaxTimeoutError") ?
           <>
             {!isObjectEmpty(error) && <p className="text-danger">{JSON.stringify(error.status.message)}</p>}
-            <ErrorButton onClick={props.fetchStart}>Connection error, click to reload</ErrorButton>
+            <ErrorButton onClick={props.fetchStart}>连接错误，点击重新加载</ErrorButton>
           </>
         : isFetching ? (
           <LoadingSpinner />
@@ -71,14 +71,14 @@ const Actionlist = (props) => {
               <TableStyled borderless>
                 <thead>
                   <tr>
-                    <th width="33%">Smart Contract Name</th>
-                    <th width="33%">Action Type</th>
-                    <th width="34%">Timestamp</th>
+                    <th width="33%">Smart协议名称</th>
+                    <th width="33%">操作类型</th>
+                    <th width="34%">创建时间</th>
                   </tr>
                 </thead>
                 <tbody className="hashText">
                   {payload.length < 1
-                    ? <tr><td colSpan="3" className="text-center">No actions found{smartContractName && ` with Smart Contract name ${smartContractName}`}</td></tr>
+                    ? <tr><td colSpan="3" className="text-center">未找到操作{smartContractName && ` Smart协议名称为 ${smartContractName}`}</td></tr>
                     : payload.map((action, index)=>
                       <tr onClick={evt=>props.push(`/action/${action.transaction_id}/${action.action_ordinal}`)} key={index}>
                         <td>{action.act_account}</td>

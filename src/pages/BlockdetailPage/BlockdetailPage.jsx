@@ -15,7 +15,7 @@ class BlockdetailPage extends Component {
         <div className="BlockdetailPage ">
           <Row>
             <Col sm="12">
-              <PageTitleDivStyled>Blocks | Block Detail Page </PageTitleDivStyled>
+              <PageTitleDivStyled>区块 | 区块详细信息页面 </PageTitleDivStyled>
             </Col>
           </Row>
           <Row>

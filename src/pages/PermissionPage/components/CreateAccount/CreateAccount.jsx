@@ -101,7 +101,7 @@ const CreateAccount = (props) => {
                         <InputStyled type="text"
                           name="accountName"
                           id="accountName"
-                          placeholder="Your account name"
+                          placeholder="您的账户名"
                           value={values.accountName || ''}
                           onChange={handleChange}
                           invalid={!!errors.accountName}
@@ -127,7 +127,7 @@ const CreateAccount = (props) => {
                         <InputStyled type="text"
                           name="ownerPublic"
                           id="ownerPublic"
-                          placeholder="Generating keys..."
+                          placeholder="生成密钥..."
                           value={
                             values.ownerPublic 
                             || payload.ownerPublicKey
@@ -143,7 +143,7 @@ const CreateAccount = (props) => {
                         <InputStyled type="text"
                             name="ownerPrivate"
                             id="ownerPrivate"
-                            placeholder="Generating keys..."
+                            placeholder="生成密钥..."
                             value={
                               values.ownerPrivate
                               || payload.ownerPrivateKey
@@ -160,7 +160,7 @@ const CreateAccount = (props) => {
                         <InputStyled type="text"
                           name="activePublic"
                           id="activePublic"
-                          placeholder="Generating keys..."
+                          placeholder="生成密钥..."
                           value={
                             values.activePublic
                             || payload.activePublicKey
@@ -176,7 +176,7 @@ const CreateAccount = (props) => {
                         <InputStyled type="text"
                             name="activePrivate"
                             id="activePrivate"
-                            placeholder="Generating keys..."
+                            placeholder="生成密钥..."
                             value={
                               values.activePrivate
                               || payload.activePrivateKey

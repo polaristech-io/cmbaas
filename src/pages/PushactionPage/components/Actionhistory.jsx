@@ -98,12 +98,12 @@ const Actionhistory = (props) => {
               <TableStyledNoPointer borderless>
                 <thead>
                   <tr className="font-weight-bold">
-                    <th width="20%">Smart Contract Name</th>
-                    <th width="20%">Action Type</th>
-                    <th width="20%">Timestamp</th>
-                    <th width="20%">Permission</th>
-                    <th width="5%" className="text-center">Success</th>
-                    <th width="15%" className="text-center">Action</th>
+                    <th width="20%">Smart协议名称</th>
+                    <th width="20%">操作类型</th>
+                    <th width="20%">创建时间</th>
+                    <th width="20%">权限</th>
+                    <th width="5%" className="text-center">成功</th>
+                    <th width="15%" className="text-center">操作</th>
                   </tr>
                 </thead>
                 <tbody>

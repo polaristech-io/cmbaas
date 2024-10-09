@@ -65,7 +65,7 @@ class ConsoleLogger extends Component {
                   ? <i className="fa fa-window-minimize"></i>
                   : <i className="fa fa-window-maximize"></i>
               }
-              <span>Console Log</span>
+              <span>控制台日志</span>
             </div>
             { !!unseen && <span className="badge">{unseen}</span> }
           </div>

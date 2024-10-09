@@ -148,18 +148,18 @@ class DragDropCodeViewer extends Component {
                         this.state.value && this.state.value !== "" 
                         ? <DivFlexStyled>
                             <DragDropSVGStyled />
-                            <label>Drag &amp; Drop files here or click browse to choose a file.</label>
-                            <ButtonPrimary onClick={(e) => e.preventDefault()} >BROWSE</ButtonPrimary>
+                            <label>将文件拖放到此处或单击“浏览”选择文件.</label>
+                            <ButtonPrimary onClick={(e) => e.preventDefault()} >浏览</ButtonPrimary>
                           </DivFlexStyled>
                         : <div>
                             <ImageDiv className="text-center">
                               <DragDropSVG />
                             </ImageDiv>   
                             <br />                   
-                            <p id="ddLabel" className="lead text-center">Drag &amp; Drop files here or<br/> click browse to choose a file.</p>
+                            <p id="ddLabel" className="lead text-center"> 将文件拖放到此处或者<br/> 单击浏览选择文件.</p>
                             <br />
                             <p className="lead text-center browseButton">
-                              <ButtonPrimary onClick={(e) => e.preventDefault()} >BROWSE</ButtonPrimary>
+                              <ButtonPrimary onClick={(e) => e.preventDefault()} >浏览</ButtonPrimary>
                             </p>
                           </div>                          
                       }                 

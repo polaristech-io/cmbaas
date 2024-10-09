@@ -23,7 +23,7 @@ const BlockchainInfo = (props) => {
       { error ?
         <>
           {!isObjectEmpty(error) && <p className="text-danger">{JSON.stringify(error)}</p>}
-          <ErrorButton onClick={props.fetchStart}>Connection error, click to reload</ErrorButton>
+          <ErrorButton onClick={props.fetchStart}>连接错误，点击重新加载</ErrorButton>
         </>
       : isFetching ? (
         <LoadingSpinner />

@@ -64,7 +64,7 @@ const Contractdetail = (props) => {
             <CardBody>
               <DivFlexStyled>
                 <SearchInputStyled 
-                      placeholder="Smart Contract Name"
+                      placeholder="Smart协议名称"
                       value={inputValue}
                       onKeyDown={
                         evt => {

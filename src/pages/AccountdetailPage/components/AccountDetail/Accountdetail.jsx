@@ -51,11 +51,11 @@ const Accountdetail = (props) => {
     <Row>
       <Col sm="12">
         <FirstCardStyled> 
-          <CardHeaderStyled>Search Account</CardHeaderStyled>
+          <CardHeaderStyled>搜索账户</CardHeaderStyled>
           <CardBody>         
             <DivFlexStyled>
               <SearchInputStyled 
-                placeholder="Account Name"
+                placeholder="账户名称"
                 value={inputValue}
                 onKeyDown={
                   evt => {
@@ -73,7 +73,7 @@ const Accountdetail = (props) => {
                   if(inputValue !== "")
                     props.push('/account/'+inputValue)
                 }}>
-              SEARCH</ButtonPrimary>
+              搜索</ButtonPrimary>
             </DivFlexStyled>            
           </CardBody>
         </FirstCardStyled>
@@ -83,7 +83,7 @@ const Accountdetail = (props) => {
         { showDetailsSection &&
           <div>                     
            {error
-            ? <CustomErrorDiv>No Account found with Account Name {params.account_name}</CustomErrorDiv>
+            ? <CustomErrorDiv>未找到具有账户名称的账户 {params.account_name}</CustomErrorDiv>
             : isFetching
               ? <LoadingSpinner />
               : (Object.keys(payload).length === 0 && payload.constructor === Object) 
@@ -92,56 +92,56 @@ const Accountdetail = (props) => {
                     <Row>
                       <Col sm="12">
                         <CardStyled> 
-                          <CardHeaderStyled>Account Detail</CardHeaderStyled>
+                          <CardHeaderStyled>账户详情</CardHeaderStyled>
                           <CardBody>  
                             <Form> 
                               <FormGroup row>
-                                <Col sm={2}>Account Name:</Col>
+                                <Col sm={2}>账户名称:</Col>
                                 <Col sm={10} className="hashText">
                                   {payload.account_name}
                                 </Col>
                               </FormGroup>
                               <FormGroup row>
-                                <Col sm={2}>Account Creation Date:</Col>
+                                <Col sm={2}>账户创建日期:</Col>
                                 <Col sm={10} className="hashText">
                                   {payload.created}
                                 </Col>
                               </FormGroup>
                               <FormGroup row>
-                                <Col sm={2}>Owner Public Key:</Col>
+                                <Col sm={2}>所有者公钥:</Col>
                                 <Col sm={10} className="hashText">                                            
                                   {payload.permissions && 
                                     payload.permissions[0].perm_name === "owner"
                                     ? payload.permissions[0].required_auth.keys.length > 0
                                       ? payload.permissions[0].required_auth.keys[0].key 
-                                      : "No Public Key"
+                                      : "没有公钥"
                                     : payload.permissions && payload.permissions[1].required_auth.keys.length > 0
                                       ? payload.permissions[1].required_auth.keys[0].key
-                                      : "No Public Key"
+                                      : "没有公钥"
                                   }
                                 </Col>
                               </FormGroup>
                               <FormGroup row>
-                                <Col sm={2}>Active Public Key:</Col>
+                                <Col sm={2}>活动公钥:</Col>
                                 <Col sm={10} className="hashText">
                                   {payload.permissions &&
                                     payload.permissions[0].perm_name === "active"
                                     ? payload.permissions[0].required_auth.keys.length > 0
                                       ? payload.permissions[0].required_auth.keys[0].key 
-                                      : "No Public Key"
+                                      : "没有公钥"
                                     : payload.permissions && payload.permissions[1].required_auth.keys.length > 0 
                                       ? payload.permissions[1].required_auth.keys[0].key
-                                      : "No Public Key"
+                                      : "没有公钥"
                                   }
                                 </Col>
                               </FormGroup>
                               { (contractPayload.hasOwnProperty("abi") === false)
                                 ? <FormGroup row>
-                                    <Col sm={2}>Smart Contract:</Col>
-                                    <Col sm={10} className="hashText"> No Smart Contract </Col>
+                                    <Col sm={2}>Smart协议:</Col>
+                                    <Col sm={10} className="hashText">没有Smart协议 </Col>
                                   </FormGroup> 
                                 : <FormGroup row>
-                                    <Col sm={2}>Smart Contract:</Col>
+                                    <Col sm={2}>Smart协议:</Col>
                                     <Col sm={10} className="hashText">
                                       <Link to={`/contract/${contractPayload.account_name}`}>
                                         {contractPayload.account_name}
@@ -157,7 +157,7 @@ const Accountdetail = (props) => {
                     <Row>
                       <Col sm="12">
                         <CardStyled>
-                          <CardHeaderStyled>Account Raw JSON</CardHeaderStyled>
+                          <CardHeaderStyled>账户原始JSON</CardHeaderStyled>
                           <CardBody>
                             <CodeViewer
                               language="json"

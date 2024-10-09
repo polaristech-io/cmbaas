@@ -43,7 +43,7 @@ const Transactionlist = (props) => {
           <CardTitle>
             <DivFlexStyled>
               <SearchInputStyled
-                    placeholder="Transaction ID"
+                    placeholder="交易ID"
                     value={inputValue}
                     onKeyDown={
                       evt => {
@@ -69,7 +69,7 @@ const Transactionlist = (props) => {
               ?
                 <>
                   {!isObjectEmpty(error) && <p className="text-danger">{JSON.stringify(error)}</p>}
-                  <ErrorButton onClick={props.pollingStart}>Connection error, click to reload</ErrorButton>
+                  <ErrorButton onClick={props.pollingStart}>连接错误，点击重新加载</ErrorButton>
                 </>
                 :
                   <Row>

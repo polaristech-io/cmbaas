@@ -35,7 +35,7 @@ const Blockdetail = (props) => {
       <div>{ error ? 
                 <>
                   {!isObjectEmpty(error) && <p className="text-danger">{JSON.stringify(error)}</p>}
-                  <ErrorButton onClick={props.fetchStart}>Connection error, click to reload</ErrorButton>
+                  <ErrorButton onClick={props.fetchStart}>连接错误，点击重新加载</ErrorButton>
                 </>
               : isFetching 
                 ? <LoadingSpinner />
@@ -44,29 +44,29 @@ const Blockdetail = (props) => {
                       <Row>
                         <Col sm="12">
                           <FirstCardStyled>
-                            <CardHeaderStyled>Block Detail</CardHeaderStyled>
+                            <CardHeaderStyled>区块详细</CardHeaderStyled>
                             <CardBody>
                               <Form> 
                                 <FormGroup row>
-                                  <Col sm={2}>Block Number:</Col>
+                                  <Col sm={2}>区块编号:</Col>
                                   <Col sm={10} className="hashText">
                                     {payload[0].block_num}
                                   </Col>
                                 </FormGroup>
                                 <FormGroup row>
-                                  <Col sm={2}>Block ID:</Col>
+                                  <Col sm={2}>区块ID:</Col>
                                   <Col sm={10} className="hashText">
                                     {payload[0].block_id}
                                   </Col>
                                 </FormGroup>
                                 <FormGroup row>
-                                  <Col sm={2}>Timestamp:</Col>
+                                  <Col sm={2}>创建时间:</Col>
                                   <Col sm={10} className="hashText">
                                     {payload[0].timestamp}
                                   </Col>
                                 </FormGroup>
                                 <FormGroup row>
-                                  <Col sm={2}>Number of Transactions:</Col>
+                                  <Col sm={2}>交易数量:</Col>
                                   <Col sm={10} className="hashText">
                                     {payload[0].transactions.length}
                                   </Col>
@@ -81,13 +81,13 @@ const Blockdetail = (props) => {
                         <Row>
                           <Col sm="12">
                             <CardStyled>
-                              <CardHeaderStyled>Transaction List</CardHeaderStyled>
+                              <CardHeaderStyled>交易列表</CardHeaderStyled>
                               <CardBody>
                                 <CustomTable borderless>
                                 <thead>
                                   <tr>
-                                    <th width="16%">Index</th>
-                                    <th width="84%">Transaction ID</th>                                    
+                                    <th width="16%">指数</th>
+                                    <th width="84%">交易ID</th>                                    
                                   </tr>
                                 </thead>
                                 <tbody className="hashText">
@@ -107,7 +107,7 @@ const Blockdetail = (props) => {
                       <Row>
                         <Col sm="12">
                           <CardStyled>
-                            <CardHeaderStyled>Block Raw JSON</CardHeaderStyled>
+                            <CardHeaderStyled>区块原始JSON</CardHeaderStyled>
                             <CardBody>
                               <CodeViewer
                                 language="json"
@@ -123,7 +123,7 @@ const Blockdetail = (props) => {
                   : <CardStyled>
                       <CardHeaderStyled></CardHeaderStyled>
                       <CardBody>
-                        <ErrorDivStyled>No Block found with Block ID or Block Number {params.id_or_num} <br/><br/>
+                        <ErrorDivStyled>未找到具有区块ID或区块编号 {params.id_or_num} 的区块<br/><br/>
                           <ButtonPrimary
                             onClick={evt=> props.push(`/block-list`)}>Back
                           </ButtonPrimary>           

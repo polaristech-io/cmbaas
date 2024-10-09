@@ -2,15 +2,15 @@ export default function validate (values, privateKeyList) {
     let errors = {};    
     
     if (!values.smartContractName || values.smartContractName.length === 0) {
-        errors.smartContractName = 'Smart Contract name is required';
+        errors.smartContractName = 'Smart协议名称为必填项目';
     }
 
-    if (!values.actionType || values.actionType.length === 0 || values.actionType === "Select Action Type") {
-        errors.actionType = 'Action Type is required';
+    if (!values.actionType || values.actionType.length === 0 || values.actionType === "选择操作类型") {
+        errors.actionType = '操作类型为必填项目';
     }
 
     if(!values.permission || values.permission.length === 0) {
-        errors.permission = 'Permission is required';
+        errors.permission = '权限为必填项目';
     }
     else {
         let errorString = "";
@@ -18,7 +18,7 @@ export default function validate (values, privateKeyList) {
 
         let privateKey = privateKeyList.find(key => key.account+"@"+key.permission === values.permission);
         if(!privateKey.private_key) {
-            reasons.push("The selected permission does not have a private key");
+            reasons.push("所选权限没有私钥");
         }
 
         if(reasons.length > 0)
@@ -26,14 +26,14 @@ export default function validate (values, privateKeyList) {
     }
     
     if (!values.payload || values.payload.length === 0) {
-        errors.payload = 'Payload is required';
+        errors.payload = '有效负载为必填项目';
     }
     else {
         let errorString = "";
         let reasons = [];
 
         if(!tryParseJSON(values.payload))
-            reasons.push("Payload must be a valid JSON string");
+            reasons.push("有效负载必须是有效的 JSON 字符串");
 
         if(reasons.length > 0)
             errors.payload = errorString + reasons.join(', ');

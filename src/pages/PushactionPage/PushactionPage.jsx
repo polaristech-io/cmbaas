@@ -205,7 +205,7 @@ const PushactionPage = (props) => {
                 }
                 <FormGroup row>
                     <Col xs="3">
-                      <Label>Smart Contract Name:</Label>
+                      <Label>Smart协议名称:</Label>
                     </Col>
                     <Col xs="9">
                       <CustomDropdown id="AccountDropdown" isOpen={isOpenDropDownSmartContract} toggle={()=>{toggleDropDownSmartContract(!isOpenDropDownSmartContract)}}>
@@ -238,12 +238,12 @@ const PushactionPage = (props) => {
                   </FormGroup>
                   <FormGroup row>
                     <Col xs="3">
-                      <Label>Action Type:</Label>
+                      <Label>操作类型:</Label>
                     </Col>
                     <Col xs="9">
                       <CustomDropdown id="ActionDropdown" isOpen={isOpenDropDownActionType} toggle={()=>{toggleDropDownActionType(!isOpenDropDownActionType)}} >
                         <DropdownToggle disabled={action.act.account === "" ? true : false}  className={errors.actionType && "invalid"} caret>
-                          {action.act.name || "Select Action Type"}
+                          {action.act.name || "选择操作类型"}
                         </DropdownToggle>
                         <DropdownMenu modifiers={dropdownMaxHeight}>
                           { actionList.length > 0 &&

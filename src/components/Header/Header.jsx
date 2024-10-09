@@ -187,48 +187,48 @@ const Header = (props) => {
               <LogoWrapper>
                 <StyledEosioLogoSmallSVG/>
                 <AppName>
-                  <div>EOSIO Labs<sub>TM</sub></div>
-                  <div>EOSIO Explorer</div>
+                  <div>EOSIO 实验室<sub>TM</sub></div>
+                  <div>EOSIO 探险家</div>
                 </AppName>
               </LogoWrapper>
             </Nav>
           </WrappedLink>
         </NavWrapper>
         <NavWrapper>
-          <NavHead>INSPECT</NavHead>
+          <NavHead>检查</NavHead>
           <NavStyled className="nav-items d-md-down-none" navbar>
             <NavItem className="px-3">
-              <Link to={`/`} className={`nav-link ${pathname === `/` ? `active` : ``}`}>INFO</Link>
+              <Link to={`/`} className={`nav-link ${pathname === `/` ? `active` : ``}`}>信息</Link>
             </NavItem>
             <NavItem className="px-3">
-              <Link to={`/block-list`} className={`nav-link ${pathname === `/block-list` || pathname === `/block-list/` || matchPath(pathname, 'block') ? `active` : ``}`}>BLOCKS</Link>
+              <Link to={`/block-list`} className={`nav-link ${pathname === `/block-list` || pathname === `/block-list/` || matchPath(pathname, 'block') ? `active` : ``}`}>区块</Link>
             </NavItem>
             <NavItem className="px-3">
-              <Link to={`/transaction-list`} className={`nav-link ${pathname === `/transaction-list` || pathname === `/transaction-list/` || matchPath(pathname, 'transaction') ? `active` : ``}`}>TRANSACTIONS</Link>
+              <Link to={`/transaction-list`} className={`nav-link ${pathname === `/transaction-list` || pathname === `/transaction-list/` || matchPath(pathname, 'transaction') ? `active` : ``}`}>交易</Link>
             </NavItem>
             <NavItem className="px-3">
-              <Link to={`/action-list`} className={`nav-link ${pathname === `/action-list` || pathname === `/action-list/` || matchPath(pathname, 'action') ? `active` : ``}`}>ACTIONS</Link>
+              <Link to={`/action-list`} className={`nav-link ${pathname === `/action-list` || pathname === `/action-list/` || matchPath(pathname, 'action') ? `active` : ``}`}>操作</Link>
             </NavItem>
             <NavItem className="px-3">
-              <Link to={`/account`} className={`nav-link ${pathname === `/account` || matchPath(pathname, 'account') ? `active` : ``}`}>ACCOUNTS</Link>
+              <Link to={`/account`} className={`nav-link ${pathname === `/account` || matchPath(pathname, 'account') ? `active` : ``}`}>账户</Link>
             </NavItem>
             <NavItem className="px-3 last-item">
-              <Link to={`/contract`} className={`nav-link ${pathname === `/contract` || matchPath(pathname, 'contract') ? `active` : ``}`}>SMART CONTRACT</Link>
+              <Link to={`/contract`} className={`nav-link ${pathname === `/contract` || matchPath(pathname, 'contract') ? `active` : ``}`}>Smart协议</Link>
             </NavItem>
           </NavStyled>
         </NavWrapper>
         <NavWrapper></NavWrapper>
         <NavWrapper>
-          <NavHead>INTERACT</NavHead>
+          <NavHead>互动交流</NavHead>
           <NavStyled className="nav-items d-md-down-none" navbar>
             <NavItem className="px-3">
-              <Link onClick={()=>panelSelect("permission-list")} to={`/permission`} className={`nav-link ${pathname === `/permission` || pathname === `/permission/` ? `active` : ``}`}>MANAGE ACCOUNTS</Link>
+              <Link onClick={()=>panelSelect("permission-list")} to={`/permission`} className={`nav-link ${pathname === `/permission` || pathname === `/permission/` ? `active` : ``}`}>管理账户</Link>
             </NavItem>
             <NavItem className="px-3">
-              <Link to={`/deploy`} className={`nav-link ${pathname === `/deploy` || pathname === `/deploy/` ? `active` : ``}`}>DEPLOY CONTRACTS</Link>
+              <Link to={`/deploy`} className={`nav-link ${pathname === `/deploy` || pathname === `/deploy/` ? `active` : ``}`}>部署协议</Link>
             </NavItem>
             <NavItem className="px-3">
-              <Link to={`/push-action`} className={`nav-link ${pathname === `/push-action` || pathname === `/push-action/` ? `active` : ``}`}>PUSH ACTIONS</Link>
+              <Link to={`/push-action`} className={`nav-link ${pathname === `/push-action` || pathname === `/push-action/` ? `active` : ``}`}>操作</Link>
             </NavItem>
           </NavStyled>
         </NavWrapper>

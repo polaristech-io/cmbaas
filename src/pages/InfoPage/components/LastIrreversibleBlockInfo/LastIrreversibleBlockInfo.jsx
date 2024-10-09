@@ -19,7 +19,7 @@ const LastIrreversibleBlockInfo = (props) => {
       { error ?
         <>
           {!isObjectEmpty(error) && <p className="text-danger">{JSON.stringify(error)}</p>}
-          <ErrorButton onClick={props.pollingStart}>Connection error, click to reload</ErrorButton>
+          <ErrorButton onClick={props.pollingStart}>连接错误，点击重新加载</ErrorButton>
         </>
       : isPolling ? (
         <LoadingSpinner />

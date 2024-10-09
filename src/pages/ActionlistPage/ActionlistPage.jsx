@@ -20,14 +20,14 @@ class ActionlistPage extends Component {
         <div className="ActionlistPage">
           <Row>
             <Col xs="12">
-              <PageTitleDivStyled>Actions Page</PageTitleDivStyled>
+              <PageTitleDivStyled>操作页面</PageTitleDivStyled>
             </Col>
           </Row>
           <Row>
             <Col xs="12">
               <FirstCardStyled>
                 <CardHeaderStyled>
-                  Action List
+                  操作列表
                 </CardHeaderStyled>
                 <CardBody>
                   <Actionlist/>

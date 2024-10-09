@@ -15,7 +15,7 @@ const Actiondetail = (props) => {
         <Form key={index} className="form-horizontal">
           <FormGroup row className="mb-0">
             <Col xs="2">
-              <Label>Smart Contract Name:</Label>
+              <Label>Smart协议名称:</Label>
             </Col>
             <Col xs="10">
               <p className="form-control-static hashText">{action && action.act_account}</p>
@@ -23,7 +23,7 @@ const Actiondetail = (props) => {
           </FormGroup>
           <FormGroup row className="mb-0">
             <Col xs="2">
-              <Label>Action Type:</Label>
+              <Label>操作类型:</Label>
             </Col>
             <Col xs="10">
               <p className="form-control-static hashText">{action && action.act_name}</p>
@@ -31,7 +31,7 @@ const Actiondetail = (props) => {
           </FormGroup>
           <FormGroup row className="mb-0">
             <Col xs="2">
-              <Label>Timestamp:</Label>
+              <Label>创建时间:</Label>
             </Col>
             <Col xs="10">
               <p className="form-control-static hashText">{action && action.timestamp}</p>
@@ -39,7 +39,7 @@ const Actiondetail = (props) => {
           </FormGroup>
           <FormGroup row className="mb-0">
             <Col xs="2">
-              <Label>Transaction ID:</Label>
+              <Label>交易ID:</Label>
             </Col>
             <Col xs="10">
               <p className="form-control-static hashText">
@@ -49,7 +49,7 @@ const Actiondetail = (props) => {
           </FormGroup>
           <FormGroup row className="mb-0">
             <Col xs="2">
-              <Label>Actor:</Label>
+              <Label>参与者:</Label>
             </Col>
             <Col xs="10">
               <p className="form-control-static hashText">

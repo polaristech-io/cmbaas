@@ -205,7 +205,7 @@ const ImportAccount = (props) => {
                       name="publicKey"
                       id="publicKey"
                       defaultValue={ keysData[0].public_key }
-                      placeholder="Enter public key"
+                      placeholder="输入公钥"
                       onChange={handleChange}
                       invalid={!!errors.publicKey}
                       readOnly={panel === 'import-account-importer'}
@@ -226,7 +226,7 @@ const ImportAccount = (props) => {
                       name="privateKey"
                       id="privateKey"
                       defaultValue={ keysData[0].private_key }
-                      placeholder="Enter private key"
+                      placeholder="输入私钥"
                       onChange={handleChange}
                       invalid={!!errors.privateKey}
                       required

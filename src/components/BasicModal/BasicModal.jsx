@@ -26,11 +26,11 @@ const BasicModal = ({ children, header, toggle, open, handleConfirm }) => (
         {
           handleConfirm &&
           <ButtonPrimary onClick={handleConfirm}>
-            Confirm
+            确认
           </ButtonPrimary>
         }
         <ButtonSecondary onClick={toggle}>
-          Close
+          关闭
         </ButtonSecondary>
       </ModalFooter>
     </Modal>

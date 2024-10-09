@@ -38,7 +38,7 @@ const Transactiondetail = (props) => {
               ? 
                 <>
                   {!isObjectEmpty(error) && <p className="text-danger">{JSON.stringify(error)}</p>}
-                  <ErrorButton onClick={props.fetchStart}>Connection error, click to reload</ErrorButton>
+                  <ErrorButton onClick={props.fetchStart}>连接错误，点击重新加载</ErrorButton>
                 </>
               : isFetching           
                 ? <LoadingSpinner />
@@ -91,7 +91,7 @@ const Transactiondetail = (props) => {
                                     <tr>
                                       <th width="16%">Index</th>
                                       <th width="34%">Action Name</th>   
-                                      <th width="40%">Smart Contract Name</th>                                   
+                                      <th width="40%">Smart协议名称</th>
                                     </tr>
                                   </thead>
                                   <tbody className="hashText">

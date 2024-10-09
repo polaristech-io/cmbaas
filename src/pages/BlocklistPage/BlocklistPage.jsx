@@ -15,7 +15,7 @@ class BlocklistPage extends Component {
         <div className="BlocklistPage">
           <Row>
             <Col sm="12">
-              <PageTitleDivStyled>Blocks Page</PageTitleDivStyled>
+              <PageTitleDivStyled>区块页面</PageTitleDivStyled>
             </Col>
           </Row>
           <Row>

@@ -37,12 +37,12 @@ const Blocklist = (props) => {
   return (
     <div className="Blocklist">
       <FirstCardStyled>
-        <CardHeaderStyled>Block List</CardHeaderStyled>
+        <CardHeaderStyled>区块列表</CardHeaderStyled>
         <CardBody>
           <Row>
             <Col sm="5">
               <CheckBoxDivStyled>
-                <label className="checkboxContainer">No empty blocks
+                <label className="checkboxContainer">没有空区块
                   <input onChange={props.filterToggle} type="checkbox" checked={filter} />
                   <span className="checkmark"></span>
                 </label>
@@ -52,7 +52,7 @@ const Blocklist = (props) => {
             <Col sm="7">
               <DivFlexStyled>
                 <SearchInputStyled
-                      placeholder="Block number / Block ID"
+                      placeholder="区块编号 / 区块ID"
                       value={inputValue}
                       onKeyDown={
                         evt => {
@@ -70,7 +70,7 @@ const Blocklist = (props) => {
                         if(inputValue !== "")
                           props.push('/block/'+inputValue)
                       }}>
-                SEARCH</ButtonPrimary>
+                搜索</ButtonPrimary>
                 </DivFlexStyled>
             </Col>
           </Row>
@@ -79,7 +79,7 @@ const Blocklist = (props) => {
               ?
                 <>
                   {!isObjectEmpty(error) && <p className="text-danger">{JSON.stringify(error)}</p>}
-                  <ErrorButton onClick={props.pollingStart}>Connection error, click to reload</ErrorButton>
+                  <ErrorButton onClick={props.pollingStart}>连接错误，点击重新加载</ErrorButton>
                 </>
               :
                 <Row>
@@ -87,10 +87,10 @@ const Blocklist = (props) => {
                     <TableStyled borderless>
                         <thead>
                           <tr>
-                            <th width="15%">Block Number</th>
-                            <th width="45%">Block ID</th>
-                            <th width="20%">No. of Transactions</th>
-                            <th width="20%">Timestamp</th>
+                            <th width="15%">区块编号</th>
+                            <th width="45%">区块ID</th>
+                            <th width="20%">交易数量</th>
+                            <th width="20%">创建时间</th>
                           </tr>
                         </thead>
                         <tbody className="hashText">
