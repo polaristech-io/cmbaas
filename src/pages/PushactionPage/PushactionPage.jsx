@@ -98,8 +98,8 @@ const PushactionPage = (props) => {
     // Confirm the successful prefill with a popup message
     if(prefillingAction.current && action.act.name && action.act.account) {
       prefillingAction.current = false;
-      cogoToast.success(`Prefilled action: ${action.act.name} from ${action.act.account}`, {
-        heading: "Action Prefilled",
+      cogoToast.success(`预填充操作: ${action.act.name} 来自 ${action.act.account}`, {
+        heading: "操作预填充",
         position: "bottom-center",
         hideAfter: 3.5
       });
@@ -178,14 +178,14 @@ const PushactionPage = (props) => {
       <div className="PushactionPage ">
         <Row>
           <Col sm="12">
-            <PageTitleDivStyled>Push Actions Page</PageTitleDivStyled>
+            <PageTitleDivStyled>推送操作页面</PageTitleDivStyled>
           </Col>
         </Row>
         <Row>
           <Col xs="12">
             <FirstCardStyled>
               <CardHeaderStyled>
-                Push Action
+                推送操作
               </CardHeaderStyled>
               <CardBody>
               { isFetchingSmartContract ? (
@@ -195,7 +195,7 @@ const PushactionPage = (props) => {
                 {
                   action.pushSuccess &&
                   <UncontrolledAlert color="success">
-                    Action pushed successfully
+                    操作推送成功
                   </UncontrolledAlert>
                 }
                 { action.error &&
@@ -270,7 +270,7 @@ const PushactionPage = (props) => {
                   </FormGroup>
                   <FormGroup row>
                     <Col xs="3">
-                      <Label>Permission:</Label>
+                      <Label>权限:</Label>
                     </Col>
                     <Col xs="9">
                       <CustomDropdown id="PermissionDropdown" isOpen={isOpenDropDownPermission} toggle={()=>{toggleDropDownPermission(!isOpenDropDownPermission)}}>
@@ -310,7 +310,7 @@ const PushactionPage = (props) => {
                   </FormGroup>
                   <FormGroup row id="PayloadItem">
                     <Col xs="12">
-                      <Label>Payload:</Label>
+                      <Label>有效负荷:</Label>
                     </Col>
                     <Col xs="12">
                       <CodeViewer 
@@ -340,7 +340,7 @@ const PushactionPage = (props) => {
                           clearAction(action, props.updateActionToPush, actionDefaultPermission);
                           resetValidation(e);
                         }}>Clear</ButtonSecondary>
-                        <ButtonPrimary type="submit">Push</ButtonPrimary>
+                        <ButtonPrimary type="submit">推送</ButtonPrimary>
                       </ButtonGroupSeperated>
                     </Col>
                   </FormGroup>
@@ -354,7 +354,7 @@ const PushactionPage = (props) => {
           <Col xs="12">
             <CardStyled>
               <CardHeaderStyled>
-                Action History Viewer
+                操作历史查看器
               </CardHeaderStyled>
               <CardBody>
                 {/* Actionhistory component takes a "prefillCallback" prop, which will be called whenever one of the prefill buttons are clicked */}

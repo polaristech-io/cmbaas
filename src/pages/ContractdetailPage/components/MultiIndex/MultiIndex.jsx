@@ -64,7 +64,7 @@ const MultiIndex = (props) => {
       <Row>
         <Col sm={6}>
           <DropdownDiv>
-            <SelectLabel>Select multi-index table to display data:</SelectLabel>
+            <SelectLabel>选择多索引表显示数据:</SelectLabel>
             <DropdownStyled isOpen={isOpenDropDown} toggle={()=>{toggleDropDown(!isOpenDropDown)}}>
               <DropdownToggle caret>{dropDownSelctedValue}</DropdownToggle>
               <DropdownMenu right>
@@ -81,13 +81,13 @@ const MultiIndex = (props) => {
         </Col>
         <Col sm={6}>
           <ScopeDivStyled>
-            <LabelStyled>Scope Name:&nbsp;&nbsp;</LabelStyled>
+            <LabelStyled>Scope名称:&nbsp;&nbsp;</LabelStyled>
             <LabelStyled id="scopeTooltip"> <ToolTipSVG /></LabelStyled>&nbsp;&nbsp;&nbsp;
             <ToolTipUncontrolledStyled placement="top" target="scopeTooltip"
               delay={{ show: 0, hide: 0}}
               trigger="hover focus"
               autohide={true}>
-              Default value of Scope name is set to Smart Contract name, change it if you want to fetch from different scope
+			  Scope名称的默认值设置为Smart协议名称，如果要从不同Scope获取，请更改Scope名称
               </ToolTipUncontrolledStyled>     
             <ScopeInputStyled 
               value={scopeName}
@@ -112,7 +112,7 @@ const MultiIndex = (props) => {
                 props.fetchStart();
                 setShowDetailsSection(true);                               
               }}>
-              Get Data
+              获取数据
             </ButtonPrimary>  
           </ScopeDivStyled>
         </Col>
@@ -128,10 +128,10 @@ const MultiIndex = (props) => {
           ? <LoadingSpinner />
           : showDetailsSection
             ? payload.length === 0
-              ? <CustomErrorDiv>No data in Multi-Index table "{params.table_name}" for scope "{params.scope_name}"</CustomErrorDiv>
+              ? <CustomErrorDiv>scope "{params.table_name}" 的多索引表 "{params.scope_name}" 中没有数据</CustomErrorDiv>
               : <div>
                   <CardStyled>
-                    <CardHeaderStyled>Multi-Index Table Raw Data</CardHeaderStyled>
+                    <CardHeaderStyled>多索引表原始数据</CardHeaderStyled>
                     <CardBody>
                       <CodeViewer
                         language="json"

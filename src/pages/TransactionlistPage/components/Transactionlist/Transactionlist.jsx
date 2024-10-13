@@ -61,7 +61,7 @@ const Transactionlist = (props) => {
                       if(inputValue !== "")
                         props.push('/transaction/'+inputValue)
                     }}>
-              SEARCH</ButtonPrimary>
+              搜索</ButtonPrimary>
             </DivFlexStyled>
           </CardTitle>
 
@@ -77,16 +77,16 @@ const Transactionlist = (props) => {
                       <TableStyled borderless>
                         <thead>
                           <tr>
-                            <th width="50%">Transaction ID</th>
-                            <th width="20%">Block Number</th>
-                            <th width="30%">Timestamp</th>
+                            <th width="50%">交易ID</th>
+                            <th width="20%">区块编号</th>
+                            <th width="30%">时间</th>
                           </tr>
                         </thead>
                         <tbody className="hashText">
                           {(isPolling) 
                           ? <tr><td colSpan="3" className="text-center"><LoadingSpinner /></td></tr>
                           : (payload.length < 1)
-                            ? <tr><td colSpan="3" className="text-center">No transactions found</td></tr>
+                            ? <tr><td colSpan="3" className="text-center">暂无交易</td></tr>
                             : payload.map((eachTransaction, index)=>
                             <tr onClick={evt=>props.push(`/transaction/${eachTransaction.id}`)} key={index}>
                               <td>{eachTransaction.id}</td>

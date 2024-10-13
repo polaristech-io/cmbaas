@@ -37,8 +37,7 @@ const CreateAccount = (props) => {
   } = permission;
 
   function createAccount () {
-    let msg = `Cannot make an account also named 'eosio', since 'eosio' owns the system contract 
-      for creating new accounts.`
+    let msg = `无法创建名为“eosio”的账户，因为“eosio”拥有用于创建新账户的系统协议。`
     if (values.accountName !== 'eosio')
       props.createStart({
         accountName: values.accountName,
@@ -49,7 +48,7 @@ const CreateAccount = (props) => {
       });
     else 
       cogoToast.error(msg, {
-        heading: 'Account Creation Denied',
+        heading: '账户创建被拒绝',
         position: 'bottom-center',
         hideAfter: 2
       });
@@ -60,7 +59,7 @@ const CreateAccount = (props) => {
     <div className="CreateAccount">
       <div>
         { 
-          error         ? <Button onClick={props.fetchStart}>Retry Generation</Button>
+          error         ? <Button onClick={props.fetchStart}>重试生成</Button>
           : <>
               <FirstCardStyled>
                 <OverlayStyled isLoading={isFetching || isSubmitting}></OverlayStyled>
@@ -76,27 +75,27 @@ const CreateAccount = (props) => {
                         </div>
                 }
                 <CardHeaderStyled>
-                  Create Account
+                  创建账户
                 </CardHeaderStyled>
                 <CardBody>
                   {
                     creationSuccess &&
                       <UncontrolledAlert color="success">
-                        Account {values.accountName} successfully created
+                        账户 {values.accountName} 已经成功创建
                       </UncontrolledAlert>
                   }
                   {
                     ((!creationSuccess) && submitError) ?
                         <UncontrolledAlert color="danger"> 
-                          Error creating the account: {submitError}
+                          创建账户时出错: {submitError}
                         </UncontrolledAlert>
                       : null
                   }
                   <Form onSubmit={
-                    handleSubmit
+                    处理提交
                   }>
                     <FormGroup row>
-                      <Label htmlFor="accountName" sm={2}>Account Name</Label>
+                      <Label htmlFor="accountName" sm={2}>账户名称</Label>
                       <Col sm={10}>
                         <InputStyled type="text"
                           name="accountName"
@@ -115,14 +114,14 @@ const CreateAccount = (props) => {
                           </FormFeedback>
                         }
                         <FormText>
-                          <strong>An EOSIO account name cannot contain capital letters.
-                          It also cannot contain the numbers 0, 6, 7, 8 or 9. The only special character you can use is '.'</strong>
+                          <strong>EOSIO 账户名不能包含大写字母。
+                          它也不能包含数字 0、6、7、8 或 9。您可以使用的唯一特殊字符是 '.'</strong>
                         </FormText>
                       </Col>
                     </FormGroup>
-                    <div><b>Owner</b></div>
+                    <div><b>所有者</b></div>
                     <FormGroup row>
-                      <Label htmlFor="ownerPublic" sm={2}>Public Key</Label>
+                      <Label htmlFor="ownerPublic" sm={2}>公钥</Label>
                       <Col sm={10}>
                         <InputStyled type="text"
                           name="ownerPublic"
@@ -138,7 +137,7 @@ const CreateAccount = (props) => {
                       </Col> 
                     </FormGroup>
                     <FormGroup row>
-                      <Label htmlFor="ownerPrivate" sm={2}>Private Key</Label>
+                      <Label htmlFor="ownerPrivate" sm={2}>私钥</Label>
                       <Col sm={10}>
                         <InputStyled type="text"
                             name="ownerPrivate"
@@ -153,9 +152,9 @@ const CreateAccount = (props) => {
                             />
                       </Col>
                     </FormGroup>
-                    <div><b>Active</b></div>
+                    <div><b>激活</b></div>
                     <FormGroup row>
-                      <Label htmlFor="activePublic" sm={2}>Public Key</Label>
+                      <Label htmlFor="activePublic" sm={2}>公钥</Label>
                       <Col sm={10}>
                         <InputStyled type="text"
                           name="activePublic"
@@ -171,7 +170,7 @@ const CreateAccount = (props) => {
                       </Col> 
                     </FormGroup>
                     <FormGroup row>
-                      <Label htmlFor="activePrivate" sm={2}>Private Key</Label>
+                      <Label htmlFor="activePrivate" sm={2}>私钥</Label>
                       <Col sm={10}>
                         <InputStyled type="text"
                             name="activePrivate"
@@ -193,13 +192,13 @@ const CreateAccount = (props) => {
                         <ButtonGroupSeperated className="float-right" >
                           <ButtonSecondary onClick={()=>{panelSelect("permission-list")}}
                             >
-                            Back
+                            后退
                           </ButtonSecondary>
                           <ButtonPrimary
                             disabled={!values.accountName || isSubmitting || creationSuccess}
                             block
                             >
-                            Create
+                            创建
                           </ButtonPrimary>
                         </ButtonGroupSeperated>
                       </Col>

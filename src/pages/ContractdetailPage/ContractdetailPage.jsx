@@ -12,7 +12,7 @@ class ContractdetailPage extends Component {
         <div className="ContractdetailPage">
           <Row>
             <Col sm="12">
-              <PageTitleDivStyled>Smart Contract Page</PageTitleDivStyled>
+              <PageTitleDivStyled>Smart协议页面</PageTitleDivStyled>
             </Col>
           </Row>
           <Row>

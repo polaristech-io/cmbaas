@@ -14,7 +14,7 @@ class TransactionlistPage extends Component {
         <div className="TransactionlistPage">
           <Row>
             <Col sm="12">
-              <PageTitleDivStyled>Transactions Page</PageTitleDivStyled>
+              <PageTitleDivStyled>交易页面</PageTitleDivStyled>
             </Col>
           </Row>
           <Row>

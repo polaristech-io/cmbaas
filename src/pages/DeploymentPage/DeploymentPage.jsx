@@ -203,7 +203,7 @@ const DeploymentPage = (props) => {
     let cleanPath = sanitizeFilepath(path);
     let actualRootPath = (cleanPath.endsWith("/")) ? cleanPath.toString() : cleanPath.toString() + "/";
     let currentPermission = list.find(account => account.account+"@"+account.permission === currentId);
-    let msg = `Cannot deploy contract under the owner of the system contract`;
+    let msg = `无法在系统协议所有者下部署协议`;
     let fullPath = {
       source: actualRootPath + currentFile
     }
@@ -221,7 +221,7 @@ const DeploymentPage = (props) => {
       contractDeploy(fullPath, deployer);
     else {
       cogoToast.warn(msg, {
-        heading: 'Unable to Deploy',
+        heading: '无法部署',
         position: 'bottom-center',
         hideAfter: 4
       });
@@ -268,14 +268,14 @@ const DeploymentPage = (props) => {
       <div className="DeploymentPage ">
         <Row>
           <Col xs="12">
-            <PageTitleDivStyled>Deploy Contracts Page</PageTitleDivStyled>
+            <PageTitleDivStyled>部署协议页面</PageTitleDivStyled>
           </Col>
         </Row>
         <Row>
           <Col xs="12">
             <FirstCardStyled>
               <CardHeaderStyled>
-                Step 1 - Select File Entry Point
+                第 1 步 - 选择文件入口点
                 </CardHeaderStyled>
               <CardBody>
                 <Row>
@@ -300,8 +300,8 @@ const DeploymentPage = (props) => {
                       trigger="hover focus"
                       autohide={true}
                     >
-                      Input the absolute folder path containing your .cpp file in this field.
-                      <br/>For example:<br/> /Users/syzygy/contracts/mycontract
+                      在此字段中输入包含 .cpp 文件的绝对文件夹路径。
+                      <br/>例如:<br/> /Users/syzygy/contracts/mycontract
                       </ToolTipUncontrolledStyled>
                   </Col>
                 </Row>
@@ -313,7 +313,7 @@ const DeploymentPage = (props) => {
           <Col xs="6" sm="6" md="6" lg="6" xl="5">
             <CardStyled style={{marginRight: '-0.5em'}}>
               <CardHeaderStyled>
-                Step 2 - ABI File (Optional)
+                第 2 步 - ABI 文件（可选）
               </CardHeaderStyled>
               <CardBody className="clearfix">
                 <Row>
@@ -335,14 +335,14 @@ const DeploymentPage = (props) => {
                           onClick={(ev) => generateAbi(ev)}
                           disabled={path.length === 0 || currentFile.length === 0 || isProcessing}
                         >
-                          GENERATE ABI
+                          生成 ABI
                         </ActionButton>
                         <ActionButton
                           id="ImportAbi"
                           onClick={() => { clickButton() }}
                           disabled={isProcessing}
                         >
-                          IMPORT ABI
+                          导入 ABI
                         </ActionButton>
                       </ButtonGroupSeperated>
                       <input type="file"
@@ -361,27 +361,27 @@ const DeploymentPage = (props) => {
                   delay={{ show: 0, hide: 0 }}
                   autohide={true}
                 >
-                  Click this button to compile the smart contract and view the resulting ABI
-                  file in the viewer below.
+				  单击此按钮编译Smart协议并查看生成的 ABI
+				  文件在下面的查看器中。
                 </ToolTipStyled>
                 <ToolTipUncontrolledStyled placement="top" target="ImportAbi"
                   delay={{ show: 0, hide: 0 }}
                   trigger="hover"
                   autohide={true}
                 >
-                  Click this button to import a pre-made ABI file and review it in the viewer above
+                  单击此按钮导入预制的 ABI 文件并在上面的查看器中查看它
                 </ToolTipUncontrolledStyled>
               </CardBody>
             </CardStyled>
             <CardStyled style={{marginRight: '-0.5em'}}>
               <CardHeaderStyled>
-                Step 3 - Deploy {imported && <Badge color="primary" pill>Imported ABI</Badge>}
+                第 3 步 - 部署 {imported && <Badge color="primary" pill>Imported ABI</Badge>}
               </CardHeaderStyled>
               <CardBody>
                 <Form>
                   <FormGroup row>
                     <Label for="permissionSelect" style={{margin: 'auto 0', fontSize: '13px'}} xs="4" sm="4">
-                      With the following permission:
+                      经以下许可:
                     </Label>
                     <Col xs="4" sm="6">
                       <DropdownStyled
@@ -401,8 +401,8 @@ const DeploymentPage = (props) => {
                                   else
                                     return null;
                                 })
-                                : "Select Permission"
-                              : "No Permissions Available"
+                                : "选择权限"
+                              : "没有可用权限"
                           }
                         </DropdownToggle>
                         {
@@ -428,7 +428,7 @@ const DeploymentPage = (props) => {
                           isProcessing}
                         onClick={(ev) => deployContract(ev)}
                       >
-                        DEPLOY
+                        部署
                       </ButtonPrimaryResponsive>
                     </Col>
                   </FormGroup>
@@ -439,7 +439,7 @@ const DeploymentPage = (props) => {
                   delay={{ show: 0, hide: 0 }}
                   autohide={true}
                 >
-                  Compiles and deploys the smart contract at once.
+				  立即编译并部署Smart协议。
                 </ToolTipStyled>
               </CardBody>
             </CardStyled>
@@ -448,7 +448,7 @@ const DeploymentPage = (props) => {
             <LogCardStyled>
               <LogCardHeaderStyled className="clearfix">
                 <span style={{ fontSize: "14px" }}>
-                  ABI / Deployment Log
+                  ABI / 部署日志
                 </span>
                 <ActionButton
                   className="float-right"
@@ -459,14 +459,14 @@ const DeploymentPage = (props) => {
                     logClear();
                   }}
                 >
-                  CLEAR ALL LOGS
+                  清除所有日志
                 </ActionButton>
                 <ToolTipUncontrolledStyled placement="top" target="ClearLogs"
                   delay={{ show: 0, hide: 0 }}
                   trigger="hover"
                   autohide={true}
                 >
-                  Click this button to remove all the currently displayed warnings and error logs
+                  单击此按钮可删除当前显示的所有警告和错误日志
                 </ToolTipUncontrolledStyled>
               </LogCardHeaderStyled>
               <CardBody>
@@ -477,7 +477,7 @@ const DeploymentPage = (props) => {
                         className={activeTab === "1" ? 'active' : ''}
                         onClick={() => setActiveTab("1")}
                       >
-                        Warnings {stdoutLog && stdoutLog.length > 0 ? "⚠️" : null}
+                        警告 {stdoutLog && stdoutLog.length > 0 ? "⚠️" : null}
                       </NavLinkFullHeight>
                     </NavItem>
                     <NavItem>
@@ -485,7 +485,7 @@ const DeploymentPage = (props) => {
                         className={activeTab === "2" ? 'active' : ''}
                         onClick={() => setActiveTab("2")}
                       >
-                        Compiler Errors {stderrLog && stderrLog.length > 0 ? "⚠️" : null}
+                        编译器错误 {stderrLog && stderrLog.length > 0 ? "⚠️" : null}
                       </NavLinkFullHeight>
                     </NavItem>
                     <NavItem>
@@ -493,7 +493,7 @@ const DeploymentPage = (props) => {
                         className={activeTab === "3" ? 'active' : ''}
                         onClick={() => setActiveTab("3")}
                       >
-                        Service Errors {errors && errors.length > 0 ? "⚠️" : null}
+                        服务器错误 {errors && errors.length > 0 ? "⚠️" : null}
                       </NavLinkFullHeight>
                     </NavItem>
                   </Nav>
@@ -503,7 +503,7 @@ const DeploymentPage = (props) => {
                         <Col sm={12}>
                           {
                             stdoutLog && stdoutLog.length === 0
-                              ? <pre>No logs</pre>
+                              ? <pre>暂无日志</pre>
                               : stdoutLog.map((line, i) =>
                                 <pre key={"stdout_" + i}>
                                   {line}
@@ -517,7 +517,7 @@ const DeploymentPage = (props) => {
                         <Col sm={12}>
                           {
                             stderrLog && stderrLog.length === 0
-                              ? <pre>No logs</pre>
+                              ? <pre>暂无日志</pre>
                               : stderrLog.map((line, i) =>
                                 <pre key={"stderr_" + i}>
                                   {line}
@@ -531,7 +531,7 @@ const DeploymentPage = (props) => {
                         <Col sm={12}>
                           {
                             errors && errors.length === 0
-                              ? <pre>No logs</pre>
+                              ? <pre>暂无日志</pre>
                               : errors.map((line, i) =>
                                 <div key={"errors_" + i}>
                                   <code>{line}</code>
@@ -545,18 +545,18 @@ const DeploymentPage = (props) => {
               </CardBody>
               <CardBody>
               <div style={outputPane}>
-                <p style={{ fontSize: "14px" }}><b>Deployment Result</b></p>
+                <p style={{ fontSize: "14px" }}><b>部署结果</b></p>
                 <br />
                 {
                   !deployed
                     ? null
                     : output
                       ? <div>
-                        <h5>Successfully deployed the {currentFile.split('.')[0]} smart contract:</h5>
+                        <h5>成功部署 {currentFile.split('.')[0]} Smart协议:</h5>
                         <pre>{JSON.stringify(output, null, 4)}</pre>
                       </div>
                       : <div>
-                        <h5>Something went wrong, please view the log for possible errors and causes</h5>
+                        <h5>出现问题，请查看日志以了解可能的错误和原因</h5>
                       </div>
                 }
               </div>

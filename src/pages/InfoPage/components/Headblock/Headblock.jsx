@@ -27,7 +27,7 @@ const Headblock = (props) => {
         <Form className="form-horizontal">
           <FormGroup row className="mb-0">
             <Col xs="2">
-              <Label>Block Number:</Label>
+              <Label>区块编号:</Label>
             </Col>
             <Col xs="10" className="hashText">
               <p className="form-control-static">{block_num}</p>
@@ -35,7 +35,7 @@ const Headblock = (props) => {
           </FormGroup>
           <FormGroup row className="mb-0">
             <Col xs="2">
-              <Label>Block ID:</Label>
+              <Label>区块ID:</Label>
             </Col>
             <Col xs="10" className="hashText">
               <p style={{textTransform: "lowercase"}} className="form-control-static">{block_id}</p>
@@ -43,7 +43,7 @@ const Headblock = (props) => {
           </FormGroup>
           <FormGroup row className="mb-0">
             <Col xs="2">
-              <Label>Timestamp:</Label>
+              <Label>时间:</Label>
             </Col>
             <Col xs="10" className="hashText">
               <p className="form-control-static">{timestamp}</p>
@@ -51,7 +51,7 @@ const Headblock = (props) => {
           </FormGroup>
           <FormGroup row className="mb-0">
             <Col xs="2">
-              <Label>Block Producer:</Label>
+              <Label>区块登陆者:</Label>
             </Col>
             <Col xs="10" className="hashText">
               <p className="form-control-static">{producer}</p>

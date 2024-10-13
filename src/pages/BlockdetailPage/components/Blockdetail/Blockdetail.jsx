@@ -60,7 +60,7 @@ const Blockdetail = (props) => {
                                   </Col>
                                 </FormGroup>
                                 <FormGroup row>
-                                  <Col sm={2}>创建时间:</Col>
+                                  <Col sm={2}>时间:</Col>
                                   <Col sm={10} className="hashText">
                                     {payload[0].timestamp}
                                   </Col>
@@ -86,7 +86,7 @@ const Blockdetail = (props) => {
                                 <CustomTable borderless>
                                 <thead>
                                   <tr>
-                                    <th width="16%">指数</th>
+                                    <th width="16%">序号</th>
                                     <th width="84%">交易ID</th>                                    
                                   </tr>
                                 </thead>

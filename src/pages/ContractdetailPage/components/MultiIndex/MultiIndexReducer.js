@@ -39,7 +39,7 @@ const fetchEpic = ( action$, state$ ) => action$.pipe(
     let { value: { contractdetailPage: { multiIndex: { params } }}} = state$;
 
     if(isObjectEmpty(params)) {
-      return of(fetchRejected([], "Please select a multi-index table"));
+      return of(fetchRejected([], "请选择多索引表"));
     }
     else {
       return apiRpc("get_table_rows", params).pipe(

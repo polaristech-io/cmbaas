@@ -20,7 +20,7 @@ const CustomTable = styled(TableStyled)`
     background-color: #ffffff;
   }
 `
-                                                       
+
 const Transactiondetail = (props) => {
 
   useEffect(()=>{
@@ -47,29 +47,29 @@ const Transactiondetail = (props) => {
                       <Row>
                         <Col sm="12">
                           <FirstCardStyled>
-                            <CardHeaderStyled>Transaction Detail</CardHeaderStyled>
+                            <CardHeaderStyled>交易详情</CardHeaderStyled>
                             <CardBody>                              
                               <Form>
                                 <FormGroup row>
-                                  <Col sm={2}>Transaction ID:</Col>
+                                  <Col sm={2}>交易ID:</Col>
                                   <Col sm={10} className="hashText">
                                     {payload[0].id}
                                   </Col>
                                 </FormGroup>
                                 <FormGroup row>
-                                  <Col sm={2}>Block Number:</Col>
+                                  <Col sm={2}>区块编号:</Col>
                                   <Col sm={10} className="hashText">
                                     <Link to={`/block/${payload[0].block_num}`}>{payload[0].block_num}</Link>
                                   </Col>
                                 </FormGroup>
                                 <FormGroup row>
-                                  <Col sm={2}>Timestamp:</Col>
+                                  <Col sm={2}>时间:</Col>
                                   <Col sm={10} className="hashText">
                                     {payload[0].partial_expiration}
                                   </Col>
                                 </FormGroup>
                                 <FormGroup row>
-                                  <Col sm={2}>Number of Actions:</Col>
+                                  <Col sm={2}>操作数量:</Col>
                                   <Col sm={10} className="hashText">
                                     {payload[0].transaction.actions.length}
                                   </Col>
@@ -84,13 +84,13 @@ const Transactiondetail = (props) => {
                         && <Row>
                             <Col sm={12}>
                               <CardStyled>
-                                <CardHeaderStyled>Action List</CardHeaderStyled>
+                                <CardHeaderStyled>操作列表</CardHeaderStyled>
                                 <CardBody>                                 
                                   <CustomTable borderless>
                                   <thead>
                                     <tr>
-                                      <th width="16%">Index</th>
-                                      <th width="34%">Action Name</th>   
+                                      <th width="16%">序号</th>
+                                      <th width="34%">操作名称</th>   
                                       <th width="40%">Smart协议名称</th>
                                     </tr>
                                   </thead>
@@ -112,7 +112,7 @@ const Transactiondetail = (props) => {
                       <Row>
                         <Col sm={12}>
                           <CardStyled>
-                            <CardHeaderStyled>Transaction Raw JSON</CardHeaderStyled>
+                            <CardHeaderStyled>交易原始JSON</CardHeaderStyled>
                             <CardBody>
                               <CodeViewer
                                 language="json"
@@ -128,7 +128,7 @@ const Transactiondetail = (props) => {
                   : <CardStyled>
                       <CardHeaderStyled></CardHeaderStyled>
                       <CardBody>
-                        <ErrorDivStyled>No Transaction found with Transaction ID {params.id} <br/><br/>
+                        <ErrorDivStyled>未找到交易ID为{params.id}的交易 <br/><br/>
                           <ButtonPrimary
                             onClick={evt=> props.push(`/transaction-list`)}>Back
                           </ButtonPrimary>           

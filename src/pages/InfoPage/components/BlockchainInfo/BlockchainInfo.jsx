@@ -31,7 +31,7 @@ const BlockchainInfo = (props) => {
         <Form className="form-horizontal">
           <FormGroup row className="mb-0">
             <Col xs="2">
-              <Label>Server Version:</Label>
+              <Label>服务器版本:</Label>
             </Col>
             <Col xs="10" className="hashText">
               <p className="form-control-static">{payload && payload.server_version}</p>
@@ -39,7 +39,7 @@ const BlockchainInfo = (props) => {
           </FormGroup>
           <FormGroup row className="mb-0">
             <Col xs="2">
-              <Label>Server Version String:</Label>
+              <Label>服务器版本字符串:</Label>
             </Col>
             <Col xs="10" className="hashText">
               <p className="form-control-static">{payload && payload.server_version_string}</p>
@@ -47,7 +47,7 @@ const BlockchainInfo = (props) => {
           </FormGroup>
           <FormGroup row className="mb-0">
             <Col xs="2">
-              <Label>Chain ID:</Label>
+              <Label>链ID:</Label>
             </Col>
             <Col xs="10" className="hashText">
               <p className="form-control-static hashText">{payload && payload.chain_id}</p>

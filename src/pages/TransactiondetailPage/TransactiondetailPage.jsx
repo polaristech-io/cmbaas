@@ -13,11 +13,11 @@ class TransactiondetailPage extends Component {
         <div className="TransactiondetailPage">
           <Row>
             <Col sm="12">
-              <PageTitleDivStyled>Transactions | Transaction Detail Page</PageTitleDivStyled>
+              <PageTitleDivStyled>交易 | 交易详情页面</PageTitleDivStyled>
             </Col>
           </Row>
           <Row>
-            <Col sm="12">              
+            <Col sm="12">
               <Transactiondetail/>
             </Col>
           </Row>

@@ -73,7 +73,7 @@ const Actionlist = (props) => {
                   <tr>
                     <th width="33%">Smart协议名称</th>
                     <th width="33%">操作类型</th>
-                    <th width="34%">创建时间</th>
+                    <th width="34%">时间</th>
                   </tr>
                 </thead>
                 <tbody className="hashText">

@@ -42,7 +42,7 @@ const Blocklist = (props) => {
           <Row>
             <Col sm="5">
               <CheckBoxDivStyled>
-                <label className="checkboxContainer">没有空区块
+                <label className="checkboxContainer">暂无区块
                   <input onChange={props.filterToggle} type="checkbox" checked={filter} />
                   <span className="checkmark"></span>
                 </label>
@@ -90,7 +90,7 @@ const Blocklist = (props) => {
                             <th width="15%">区块编号</th>
                             <th width="45%">区块ID</th>
                             <th width="20%">交易数量</th>
-                            <th width="20%">创建时间</th>
+                            <th width="20%">时间</th>
                           </tr>
                         </thead>
                         <tbody className="hashText">

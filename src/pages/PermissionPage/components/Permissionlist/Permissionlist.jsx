@@ -64,11 +64,11 @@ const Permissionlist = (props) => {
   }
 
   function setAsDefault (accName, permission) {
-    let msg = `Successfully set ${accName}@${permission} as the default account`;
+    let msg = `成功将 ${accName}@${permission} 设置为默认账户`;
     defaultSet(accName+"@"+permission);
     if (defaultId !== accName+"@"+permission)
       cogoToast.success(msg, {
-        heading: 'Account Changed',
+        heading: '账户已更改',
         position: 'bottom-center',
         hideAfter: 2
       });
@@ -80,16 +80,15 @@ const Permissionlist = (props) => {
                           : <div>
                               <FirstCardStyled>
                                 <CardHeaderStyled>
-                                  Default Signature Account
+                                  默认签名账户
                                 </CardHeaderStyled>
                                 <CardBody>
                                   <InfoDivStyled>
-                                    These are your currently available accounts that possess both public and private keys. They can be
-                                    used for signing transactions and pushing actions. 
-                                    The <b>eosio</b> account owns the system contract responsible for numerous important functions, so please
-                                    be aware that you can not deploy new contracts locally under that permission. 
-                                    Click the "Edit" button if you want to update or check your keys for these accounts. 
-                                    Click the radio button to set the default account for authorizing actions.
+                                    这些是您当前可用的账户，拥有公钥和私钥。 
+                                    它们可用于签署交易和推送操作。
+                                    <b>eosio</b> 账户拥有负责众多重要功能的系统协议，因此请注意，您无法在该权限下在本地部署新协议。 
+                                    如果您想更新或检查这些账户的密钥，请单击“编辑”按钮。 
+                                    单击单选按钮设置用于授权操作的默认账户。
                                   </InfoDivStyled>
                                   <PermissionTable borderless>
                                     {
@@ -126,7 +125,7 @@ const Permissionlist = (props) => {
                                                         onClick={() => getKeysData(eachPermission, list, "edit")}                                                        
                                                         block
                                                         >
-                                                        Edit
+                                                        编辑
                                                       </ButtonPrimary>
                                                 </EditButtonCell>
                                               </tr>
@@ -135,7 +134,7 @@ const Permissionlist = (props) => {
                                       : <tbody>
                                         <tr>
                                           <td width="100%" style={{textAlign:"center"}}>
-                                            <strong>No accounts available</strong>
+                                            <strong>没有可用账户</strong>
                                           </td>
                                         </tr>
                                       </tbody>
@@ -145,14 +144,12 @@ const Permissionlist = (props) => {
                               </FirstCardStyled>                              
                               { (listWithoutPrivateKey.length > 0) 
                                 ? <FirstCardStyled>
-                                  <CardHeaderStyled>Import Account</CardHeaderStyled>
+                                  <CardHeaderStyled>导入账户</CardHeaderStyled>
                                   <CardBody>
                                     <InfoDivStyled>
-                                      The accounts in this panel do not have private keys assigned to them yet. You can click 
-                                      the "Import Keys" button to assign your private keys to these accounts. <b>Note:</b> Be 
-                                      sure that the private keys you import to the accounts here correspond to the public
-                                      key fetched from the PostgresDB. Otherwise you won't be able to do anything with them, even
-                                      if you import keys. 
+                                      此面板中的账户尚未分配私钥。 
+                                      您可以单击“导入密钥”按钮将您的私钥分配给这些账户。 
+                                      <b>注意：</b>请确保您导入到此处账户的私钥与从 PostgresDB 获取的公钥相对应。否则，即使导入密钥，您也将无法对它们执行任何操作。
                                     </InfoDivStyled>
                                     <PermissionTable borderless>
                                     {
@@ -171,7 +168,7 @@ const Permissionlist = (props) => {
                                                     onClick={() => getKeysData(eachPermission, list, "importer")}
                                                     block
                                                     >
-                                                    Import Keys
+                                                    导入密钥
                                                   </ButtonPrimary>
                                             </EditButtonCell> 
                                           </tr>

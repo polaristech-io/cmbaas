@@ -18,7 +18,7 @@ export default function validate (values, privateKeyList) {
 
         let privateKey = privateKeyList.find(key => key.account+"@"+key.permission === values.permission);
         if(!privateKey.private_key) {
-            reasons.push("所选权限没有私钥");
+            reasons.push("所选权限暂无私钥");
         }
 
         if(reasons.length > 0)

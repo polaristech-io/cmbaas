@@ -114,10 +114,10 @@ const Accountdetail = (props) => {
                                     payload.permissions[0].perm_name === "owner"
                                     ? payload.permissions[0].required_auth.keys.length > 0
                                       ? payload.permissions[0].required_auth.keys[0].key 
-                                      : "没有公钥"
+                                      : "暂无公钥"
                                     : payload.permissions && payload.permissions[1].required_auth.keys.length > 0
                                       ? payload.permissions[1].required_auth.keys[0].key
-                                      : "没有公钥"
+                                      : "暂无公钥"
                                   }
                                 </Col>
                               </FormGroup>
@@ -128,17 +128,17 @@ const Accountdetail = (props) => {
                                     payload.permissions[0].perm_name === "active"
                                     ? payload.permissions[0].required_auth.keys.length > 0
                                       ? payload.permissions[0].required_auth.keys[0].key 
-                                      : "没有公钥"
+                                      : "暂无公钥"
                                     : payload.permissions && payload.permissions[1].required_auth.keys.length > 0 
                                       ? payload.permissions[1].required_auth.keys[0].key
-                                      : "没有公钥"
+                                      : "暂无公钥"
                                   }
                                 </Col>
                               </FormGroup>
                               { (contractPayload.hasOwnProperty("abi") === false)
                                 ? <FormGroup row>
                                     <Col sm={2}>Smart协议:</Col>
-                                    <Col sm={10} className="hashText">没有Smart协议 </Col>
+                                    <Col sm={10} className="hashText">暂无Smart协议 </Col>
                                   </FormGroup> 
                                 : <FormGroup row>
                                     <Col sm={2}>Smart协议:</Col>

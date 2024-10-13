@@ -84,21 +84,20 @@ const WelcomePopup = ({ toggle, open, toggleShowAgain }) => {
                 <img src="https://icon.now.sh/x/8ba5bf" alt="close" />
               </CloseButton>
               <PageTitleDivStyled>
-                Welcome to EOSIO Labs™: EOSIO Explorer
+                欢迎来到 EOSIO Labs™：EOSIO Explorer
               </PageTitleDivStyled>
-              <p>EOSIO Labs™: EOSIO Explorer is an open source browser to observe activity of an EOSIO blockchain in a graphical
-                interface and a set of development tools to speed up EOSIO smart contract and application development.
+              <p>
+			    EOSIO Labs™: EOSIO Explorer 是一款开源浏览器，用于在图形界面中观察 EOSIO 区块链的活动，以及一组加速 EOSIO 智能合约和应用程序开发的开发工具。
               </p>
-              <p>Using EOSIO Labs™: EOSIO Explorer you can view blocks, transactions and actions on an EOSIO blockchain, manage
-                developer accounts and permissions associated with them, upload and interact with smart contracts
-                and much more.
+              <p>
+				使用 EOSIO Labs™：EOSIO Explorer，您可以查看 EOSIO 区块链上的块、交易和操作，管理开发人员帐户和与其关联的权限，上传Smart协议并与Smart协议交互等。
               </p>
-              <p>If you have any feedback or you&apos;d like to contribute to the source code of EOSIO Labs™: EOSIO Explorer -
-                please follow our GitHub repository: <a href="https://github.com/EOSIO/eosio-explorer" target="_blank" rel="noopener noreferrer">https://github.com/EOSIO/eosio-explorer</a>
+              <p>
+				如果您有任何反馈或者您想为 EOSIO Labs™ 的源代码做出贡献：EOSIO Explorer - 请关注我们的 GitHub 存储库：<a href="https://github.com/EOSIO/eosio-explorer" target="_blank" rel="noopener noreferrer">https://github.com/EOSIO/eosio-explorer</a>
               </p>
               <CheckBoxDivStyled style={{marginTop: '31px'}}>
                 <label className="checkboxContainer">
-                  Don't show this message again
+                  不再显示此消息
                   <input id="toggleCheck" type="checkbox"/>
                   <span className="checkmark"></span>
                 </label>

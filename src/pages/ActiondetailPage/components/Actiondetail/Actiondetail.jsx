@@ -31,7 +31,7 @@ const Actiondetail = (props) => {
           </FormGroup>
           <FormGroup row className="mb-0">
             <Col xs="2">
-              <Label>创建时间:</Label>
+              <Label>时间:</Label>
             </Col>
             <Col xs="10">
               <p className="form-control-static hashText">{action && action.timestamp}</p>

@@ -2,13 +2,13 @@ export default function validate(values) {
   let errors = {};
 
   if (!values.accountName || values.accountName.length === 0) {
-    errors.accountName = 'Account name is required';
+    errors.accountName = '账户名称为必填项';
   } else if (!/^([a-z1-5][a-z1-5.]+)$/.test(values.accountName)) {
-    let errorString = "Invalid EOSIO account name: ";
+    let errorString = "EOSIO 账户名无效: ";
     let reasons = [];
 
     if (/[A-Z]/.test(values.accountName)) {
-      reasons.push("name contains capital letters");
+      reasons.push("名称包含大写字母");
     }
 
     if (/[6-9]/.test(values.accountName)) {
@@ -17,7 +17,7 @@ export default function validate(values) {
       if (values.accountName.includes("7")) numbers.push(7);
       if (values.accountName.includes("8")) numbers.push(8);
       if (values.accountName.includes("9")) numbers.push(9);
-      reasons.push("name contains following numbers: " + numbers.join(','));
+      reasons.push("名称包含以下数字: " + numbers.join(','));
     }
 
     errors.accountName = errorString + reasons.join(', ');

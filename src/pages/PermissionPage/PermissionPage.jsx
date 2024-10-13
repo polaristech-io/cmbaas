@@ -68,8 +68,8 @@ class PermissionPage extends Component {
     function reInitialize () {
       accountClear();
       fetchStart();
-      cogoToast.success("Successfully re-initialized the local storage state", {
-        heading: 'Account Storage Reinitialization',
+      cogoToast.success("成功重新初始化本地存储状态", {
+        heading: '账户存储重新初始化',
         position: 'bottom-center'
       });
     }
@@ -86,7 +86,7 @@ class PermissionPage extends Component {
             <Col sm="12">
               <Row>
                 <Col sm="12">
-                  <PageTitleDivStyled>Manage Accounts Page</PageTitleDivStyled>
+                  <PageTitleDivStyled>管理账户页面</PageTitleDivStyled>
                 </Col>
               </Row>
               <Row>
@@ -95,8 +95,8 @@ class PermissionPage extends Component {
                   ? (<Col sm={12}>
                     <ButtonGroupSeperated className="float-right"
                       style={{display: (panel === "permission-list") ? 'block' : 'none'}}>
-                      <CustomButtonPrimary id="CreateAccountBtn" onClick={()=>{changePanel("create-account")}}>Create Account</CustomButtonPrimary>
-                      <CustomButtonSecondary id="ResetPermissionBtn" onClick={()=>this.toggleModal()}>Reset All Permissions</CustomButtonSecondary>
+                      <CustomButtonPrimary id="CreateAccountBtn" onClick={()=>{changePanel("create-account")}}>创建账户</CustomButtonPrimary>
+                      <CustomButtonSecondary id="ResetPermissionBtn" onClick={()=>this.toggleModal()}>重置所有权限</CustomButtonSecondary>
                     </ButtonGroupSeperated>
                     <ToolTipStyled placement="bottom" target="ResetPermissionBtn"
                       isOpen={this.state.resetTooltip && panel === "permission-list"}
@@ -104,9 +104,7 @@ class PermissionPage extends Component {
                       delay={{show: 0, hide: 0}}
                       trigger="hover"
                       autohide={true}>
-                      All private keys are stored locally on your machine. Clicking this button will
-                      revert the local storage to its default state. This means all your
-                      currently stored private keys will be cleared!
+                      所有私钥都存储在您的本地计算机上。单击此按钮会将本地存储恢复到默认状态。这意味着您当前存储的所有私钥都将被清除！
                     </ToolTipStyled>
                   </Col>)
                   : null
@@ -123,7 +121,7 @@ class PermissionPage extends Component {
                     }
                     </Col>)
                   : (<Col sm={12}>
-                    <CustomErrorDiv>Currently not connected to any blockchain, unable to display accounts</CustomErrorDiv>
+                    <CustomErrorDiv>目前未连接任何区块链，无法显示账户</CustomErrorDiv>
                   </Col>)
                 }
               </Row>
@@ -137,7 +135,7 @@ class PermissionPage extends Component {
               open={this.state.modalIsOpen}
               handleConfirm={()=>{this.toggleModal(); reInitialize();}}
               >
-              Are you sure you want to reset all permissions? You will <b>permanently</b> lose all your private keys in the local storage!
+              您确定要重置所有权限吗？您将<b>永久</b>丢失本地存储中的所有私钥！
             </BasicModal>
           )
         }

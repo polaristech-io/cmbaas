@@ -72,16 +72,16 @@ class CheckShipVersionPage extends Component {
               : <InfoModalWrapper>
                 <WelcomeModalCard>                    
                   <PopUpTitleStyled>
-                    Error
+                    错误
                   </PopUpTitleStyled>
                   <p>
-                    SHiP plugin is not enabled on the node <b>{this.url}</b> you are trying to connect to.
+                    您尝试连接的节点 <b>{this.url}</b> 未启用 SHiP 插件。
                   </p>                    
                   <p>
-                    Run the `eosio-explorer init` command again with a valid endpoint.
+                    使用有效端点再次运行 `eosio-explorer init` 命令。
                   </p>
                   <p>
-                    Please go through the pre-requisites on our GitHub page: <a href="https://github.com/EOSIO/eosio-explorer" target="_blank" rel="noopener noreferrer">https://github.com/EOSIO/eosio-explorer</a>
+                    请在我们的GitHub上完成先决条件: <a href="https://github.com/EOSIO/eosio-explorer" target="_blank" rel="noopener noreferrer">https://github.com/EOSIO/eosio-explorer</a>
                   </p>                   
                 </WelcomeModalCard>
                 <Background />

@@ -82,7 +82,7 @@ const Contractdetail = (props) => {
                         if(inputValue !== "")
                           props.push('/contract/'+inputValue)                         
                       }}>
-                SEARCH</ButtonPrimary>
+                搜索</ButtonPrimary>
               </DivFlexStyled>
             </CardBody>
           </FirstCardStyled>
@@ -93,7 +93,7 @@ const Contractdetail = (props) => {
       {showDetailsSection && 
         <div>
           {error
-            ? <CustomErrorDiv>No Smart Contract found with Smart Contract Name {params.account_name}</CustomErrorDiv>
+            ? <CustomErrorDiv>未找到Smart协议名称为 {params.account_name}的协议</CustomErrorDiv>
             : isFetching 
               ? <LoadingSpinner />
               : (Object.keys(payload).length !== 0 && payload.hasOwnProperty("abi") === true) 
@@ -101,9 +101,9 @@ const Contractdetail = (props) => {
                     <Row> 
                       <Col sm="12">
                         <CardStyled>
-                          <CardHeaderStyled>Smart Contract Detail</CardHeaderStyled>
+                          <CardHeaderStyled>Smart协议详细</CardHeaderStyled>
                           <CardBody>
-                            <DivHeaderStyled>Smart Contract Name:&nbsp;{payload.account_name}</DivHeaderStyled>
+                            <DivHeaderStyled>Smart协议名称:&nbsp;{payload.account_name}</DivHeaderStyled>
                             <CodeViewer 
                               language="json"
                               value={JSON.stringify(payload.abi, null, 2)}
@@ -116,10 +116,10 @@ const Contractdetail = (props) => {
                     </Row>  
                     
                     { payload.abi.tables.length === 0 
-                      ? <DivMessageStyled>No Multi-Index table present for this contract</DivMessageStyled>
+                      ? <DivMessageStyled>此协议不存在多个索引表</DivMessageStyled>
                       : <MultiIndex abiData={payload} />}
                   </div> 
-            : <CustomErrorDiv>No Smart Contract found with Smart Contract Name {params.account_name}</CustomErrorDiv>           
+            : <CustomErrorDiv>未找到Smart协议名称为 {params.account_name}的协议</CustomErrorDiv>           
           } 
         </div>    
       }

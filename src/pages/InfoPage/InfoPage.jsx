@@ -45,7 +45,7 @@ class InfoPage extends Component {
         <div className="InfoPage">
           <Row>
             <Col xs="12">
-              <PageTitleDivStyled>Info Page</PageTitleDivStyled>
+              <PageTitleDivStyled>信息页面</PageTitleDivStyled>
             </Col>
           </Row>
 
@@ -53,7 +53,7 @@ class InfoPage extends Component {
             <Col xs="12">
               <FirstCardStyled>
                 <CardHeaderStyled>
-                  Connections
+                  连接
                 </CardHeaderStyled>
                 <CardBody>
                   <InputStyled
@@ -70,7 +70,7 @@ class InfoPage extends Component {
             <Col xs="12">
               <CardStyled>
                 <CardHeaderStyled>
-                  Blockchain Information
+                  区块链资讯
                 </CardHeaderStyled>
                 <CardBody>
                   <BlockchainInfo />
@@ -83,7 +83,7 @@ class InfoPage extends Component {
             <Col xs="12">
               <CardStyled>
                 <CardHeaderStyled>
-                  Head Block Information
+                  头块信息
                 </CardHeaderStyled>
                 <CardBody>
                   <Headblock/>
@@ -96,7 +96,7 @@ class InfoPage extends Component {
             <Col xs="12">
               <CardStyled>
                 <CardHeaderStyled>
-                  Last Irreversible Block Information
+                  最后不可逆区块信息
                 </CardHeaderStyled>
                 <CardBody>
                   <LastIrreversibleBlockInfo />
