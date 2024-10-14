@@ -81,7 +81,7 @@ const WelcomePopup = ({ toggle, open, toggleShowAgain }) => {
           <InfoModalWrapper>
             <WelcomeModalCard>
               <CloseButton onClick={() => closeModal()}>
-                <img src="https://icon.now.sh/x/8ba5bf" alt="close" />
+                <img src="https://icon.now.sh/x/8ba5bf" alt="关闭" />
               </CloseButton>
               <PageTitleDivStyled>
                 欢迎来到 EOSIO Labs™：EOSIO Explorer
@@ -109,7 +109,7 @@ const WelcomePopup = ({ toggle, open, toggleShowAgain }) => {
                   bottom: '21px',
                   right: '19px'
                 }}>
-                OK
+                确定
               </ButtonPrimary>
             </WelcomeModalCard>
             <Background />

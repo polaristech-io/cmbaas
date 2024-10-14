@@ -92,7 +92,7 @@ const CreateAccount = (props) => {
                       : null
                   }
                   <Form onSubmit={
-                    处理提交
+                    handleSubmit
                   }>
                     <FormGroup row>
                       <Label htmlFor="accountName" sm={2}>账户名称</Label>

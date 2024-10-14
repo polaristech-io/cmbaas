@@ -38,7 +38,7 @@ const Transactionlist = (props) => {
   return (
     <div className="Transactionlist">
       <FirstCardStyled>
-        <CardHeaderStyled>Transaction List</CardHeaderStyled>
+        <CardHeaderStyled>交易列表</CardHeaderStyled>
         <CardBody>
           <CardTitle>
             <DivFlexStyled>

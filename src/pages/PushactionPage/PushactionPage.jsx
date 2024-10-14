@@ -209,7 +209,7 @@ const PushactionPage = (props) => {
                     </Col>
                     <Col xs="9">
                       <CustomDropdown id="AccountDropdown" isOpen={isOpenDropDownSmartContract} toggle={()=>{toggleDropDownSmartContract(!isOpenDropDownSmartContract)}}>
-                        <DropdownToggle caret className={errors.smartContractName && "invalid"}>{action.act.account || "Select Smart Contract"}</DropdownToggle>
+                        <DropdownToggle caret className={errors.smartContractName && "invalid"}>{action.act.account || "选择Smart协议"}</DropdownToggle>
                         <DropdownMenu modifiers={dropdownMaxHeight}>
                           {smartContractsList &&
                             (smartContractsList).map((smartContract, index)=>
@@ -275,12 +275,12 @@ const PushactionPage = (props) => {
                     <Col xs="9">
                       <CustomDropdown id="PermissionDropdown" isOpen={isOpenDropDownPermission} toggle={()=>{toggleDropDownPermission(!isOpenDropDownPermission)}}>
                         <DropdownToggle className={errors.permission && "invalid"} caret>                        
-                          { list.filter(permission => !!permission.private_key).length < 1 ? "No Permissions Available"
+                          { list.filter(permission => !!permission.private_key).length < 1 ? "没有可用权限"
                             : Object.keys(selectedPermission).length > 0
                               ? (selectedPermission.account+"@"+selectedPermission.permission === defaultId)
-                                  ? (selectedPermission.account + "@" + selectedPermission.permission + " (default)")
+                                  ? (selectedPermission.account + "@" + selectedPermission.permission + " (默认)")
                                   : (selectedPermission.account + "@" + selectedPermission.permission)
-                              : "Select Permission"}
+                              : "选择权限"}
                         </DropdownToggle>
                         <DropdownMenu modifiers={dropdownMaxHeight}>
                           {(list).map( permission => permission.private_key &&
@@ -292,7 +292,7 @@ const PushactionPage = (props) => {
                                   resetValidation(e);
                               }}>
                                 {(defaultId === permission.account+"@"+permission.permission)
-                                 ? (permission.account + '@'+ permission.permission +' (default)')
+                                 ? (permission.account + '@'+ permission.permission +' (默认)')
                                  : (permission.account + '@'+ permission.permission)
                                 }  
                               </DropdownItem>)}
@@ -339,7 +339,7 @@ const PushactionPage = (props) => {
                           let actionDefaultPermission = !!defaultPermission ? { actor: defaultPermission.account, permission: defaultPermission.permission } : undefined;
                           clearAction(action, props.updateActionToPush, actionDefaultPermission);
                           resetValidation(e);
-                        }}>Clear</ButtonSecondary>
+                        }}>清除</ButtonSecondary>
                         <ButtonPrimary type="submit">推送</ButtonPrimary>
                       </ButtonGroupSeperated>
                     </Col>

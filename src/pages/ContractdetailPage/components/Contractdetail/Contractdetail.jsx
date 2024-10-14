@@ -60,7 +60,7 @@ const Contractdetail = (props) => {
       <Row> 
         <Col sm="12">
           <FirstCardStyled>
-            <CardHeaderStyled>Search Smart Contract</CardHeaderStyled>
+            <CardHeaderStyled>搜索Smart协议</CardHeaderStyled>
             <CardBody>
               <DivFlexStyled>
                 <SearchInputStyled 

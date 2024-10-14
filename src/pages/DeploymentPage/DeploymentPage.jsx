@@ -288,7 +288,7 @@ const DeploymentPage = (props) => {
                       setCurrentFile={setCurrentFile}
                     /> 
                     <DivFlexStyled>
-                      <LabelStyled> Root&nbsp;Folder&nbsp;Path: </LabelStyled>&nbsp;&nbsp;
+                      <LabelStyled> 根文件夹路径: </LabelStyled>&nbsp;&nbsp;
                       <LabelStyled id="rootFolder"><ToolTipSVG /></LabelStyled>&nbsp;&nbsp;
                       <InputStyled type="text"
                             name="rootFolder"                            
