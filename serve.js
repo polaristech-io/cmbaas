@@ -52,7 +52,7 @@ app.listen(PORT, ()=>{
     let url;   
     url = "http://localhost:" + PORT +"/check-ship";      
     console.log(`Application is ready on http://localhost:${PORT}.`);
-    console.log(`You can now view EOSIO Labs™: EOSIO Explorer in the browser.`);
+    console.log(`You can now view cmcc™: EOSIO Explorer in the browser.`);
     openBrowser(url);
   }
 });

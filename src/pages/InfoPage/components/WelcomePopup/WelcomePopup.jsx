@@ -84,16 +84,16 @@ const WelcomePopup = ({ toggle, open, toggleShowAgain }) => {
                 <img src="https://icon.now.sh/x/8ba5bf" alt="关闭" />
               </CloseButton>
               <PageTitleDivStyled>
-                欢迎来到 EOSIO Labs™：EOSIO Explorer
+                欢迎来到 cmcc™：EOSIO Explorer
               </PageTitleDivStyled>
               <p>
-			    EOSIO Labs™: EOSIO Explorer 是一款开源浏览器，用于在图形界面中观察 EOSIO 区块链的活动，以及一组加速 EOSIO 智能合约和应用程序开发的开发工具。
+			    cmcc™: EOSIO Explorer 是一款开源浏览器，用于在图形界面中观察 EOSIO 区块链的活动，以及一组加速 EOSIO 智能合约和应用程序开发的开发工具。
               </p>
               <p>
-				使用 EOSIO Labs™：EOSIO Explorer，您可以查看 EOSIO 区块链上的块、交易和操作，管理开发人员帐户和与其关联的权限，上传Smart协议并与Smart协议交互等。
+				使用 cmcc™：EOSIO Explorer，您可以查看 EOSIO 区块链上的块、交易和操作，管理开发人员帐户和与其关联的权限，上传Smart协议并与Smart协议交互等。
               </p>
               <p>
-				如果您有任何反馈或者您想为 EOSIO Labs™ 的源代码做出贡献：EOSIO Explorer - 请关注我们的 GitHub 存储库：<a href="https://github.com/EOSIO/eosio-explorer" target="_blank" rel="noopener noreferrer">https://github.com/EOSIO/eosio-explorer</a>
+				如果您有任何反馈或者您想为 cmcc™ 的源代码做出贡献：EOSIO Explorer - 请关注我们的 GitHub 存储库：<a href="https://github.com/EOSIO/eosio-explorer" target="_blank" rel="noopener noreferrer">https://github.com/EOSIO/eosio-explorer</a>
               </p>
               <CheckBoxDivStyled style={{marginTop: '31px'}}>
                 <label className="checkboxContainer">
